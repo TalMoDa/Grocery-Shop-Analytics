@@ -209,20 +209,47 @@ export class ShopAnalyticsComponent implements OnInit, OnDestroy {
 
   private setupChartOptions(): void {
     this.chartOptions = {
-      title: 'Shop Analytics',
+      title: 'Shop Analytics Overview',
       curveType: 'function',
-      legend: { position: 'bottom' },
+      backgroundColor: {
+        fill: 'transparent' // Removes harsh white background
+      },
+      chartArea: {
+        width: '80%',
+        height: '70%'
+      },
+      tooltip: {
+        isHtml: true,
+        textStyle: { fontSize: 14 }
+      },
+      legend: {
+        position: 'top',
+        alignment: 'center',
+        textStyle: { fontSize: 14, color: '#555' }
+      },
       hAxis: {
         title: 'Date',
-        format: 'MMM d, y'
+        titleTextStyle: { fontSize: 16, bold: true, color: '#555' },
+        textStyle: { fontSize: 12, color: '#666' },
+        format: 'MMM d, y',
+        gridlines: { color: '#e5e5e5' }
       },
       vAxis: {
-        title: 'Amount'
+        title: 'Amount',
+        titleTextStyle: { fontSize: 16, bold: true, color: '#555' },
+        textStyle: { fontSize: 12, color: '#666' },
+        gridlines: { color: '#e5e5e5' },
+        minValue: 0
       },
       series: {
-        0: { color: 'red' },   // Income
-        1: { color: 'blue' },  // Outcome
-        2: { color: 'green' }  // Revenue
+        0: { color: '#ff4c4c', lineWidth: 3 }, // Income - Red
+        1: { color: '#4c79ff', lineWidth: 3 }, // Outcome - Blue
+        2: { color: '#2ecc71', lineWidth: 3 }  // Revenue - Green
+      },
+      animation: {
+        startup: true,
+        duration: 1000,
+        easing: 'out'
       }
     };
   }

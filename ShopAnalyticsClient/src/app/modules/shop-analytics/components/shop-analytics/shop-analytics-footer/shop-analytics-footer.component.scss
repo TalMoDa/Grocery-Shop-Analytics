@@ -1,0 +1,60 @@
+/* 🔹 Footer Styling */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__left {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &__right {
+      display: flex;
+      gap: 15px;
+
+      p {
+        margin: 0;
+        cursor: pointer;
+        font-weight: 500;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: #1abc9c; // Nice green hover effect
+        }
+      }
+    }
+  }
+}
+
+/* 📱 Mobile Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-content__right {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
