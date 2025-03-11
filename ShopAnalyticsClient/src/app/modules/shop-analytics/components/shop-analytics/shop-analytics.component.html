@@ -1,0 +1,60 @@
+<div class="analytics-container">
+
+  <app-shop-analytics-header></app-shop-analytics-header>
+
+  <section class="filter-section">
+    <form [formGroup]="filterForm" (ngSubmit)="onFilter()">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="shopSelect">Select Shop:</label>
+          <select id="shopSelect" formControlName="shopId" class="form-control">
+            <option *ngFor="let shop of shops" [value]="shop.id">{{ shop.name }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fromDate">From Date:</label>
+          <input
+            type="date"
+            id="fromDate"
+            formControlName="fromDate"
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="toDate">To Date:</label>
+          <input
+            type="date"
+            id="toDate"
+            formControlName="toDate"
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn-filter">Filter</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- Chart section -->
+  <section class="chart-section">
+    <div *ngIf="isLoading" class="loading">Loading data...</div>
+    <div *ngIf="!isLoading && chartData.length > 0">
+      <google-chart
+        [type]="chartType"
+        [data]="chartData"
+        [columns]="chartColumns"
+        [options]="chartOptions"
+        [width]="900"
+        [height]="500">
+      </google-chart>
+    </div>
+    <div *ngIf="!isLoading && chartData.length === 0" class="no-data">
+      No data available for the selected period
+    </div>
+  </section>
+
+  <footer class="footer">
+  </footer>
+</div>
