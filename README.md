@@ -119,7 +119,7 @@ GET /api/analytics/1?fromDate=2021-06-01&toDate=2021-12-31
 | Technology                       | Description |
 |----------------------------------|-------------|
 | **Angular 19**                   | Frontend framework |
-| **ASP.NET Core 8**               | Backend framework |
+| **ASP.NET Core 9**               | Backend framework |
 | **PostgreSQL (Neon)**            | Database |
 | **Google Charts**                | Chart visualization |
 | **Serilog**                      | Structured logging |
