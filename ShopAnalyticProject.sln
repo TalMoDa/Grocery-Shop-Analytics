@@ -1,8 +1,71 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{08E04FDF-7B1C-44B0-9DEB-0F675F8F2C0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopAnalytics", "ShopAnalytics\ShopAnalytics\ShopAnalytics.csproj", "{F1EE5621-2A22-43FA-8E99-BE586148F727}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{04774E86-8FE2-4ECA-8111-C45502FA5D98}"
+	ProjectSection(SolutionItems) = preProject
+		ShopAnalyticsClient\.editorconfig = ShopAnalyticsClient\.editorconfig
+		ShopAnalyticsClient\.gitignore = ShopAnalyticsClient\.gitignore
+		ShopAnalyticsClient\.idea\.gitignore = ShopAnalyticsClient\.idea\.gitignore
+		ShopAnalyticsClient\.idea\git_toolbox_blame.xml = ShopAnalyticsClient\.idea\git_toolbox_blame.xml
+		ShopAnalyticsClient\.idea\modules.xml = ShopAnalyticsClient\.idea\modules.xml
+		ShopAnalyticsClient\.idea\ShopAnalyticsClient.iml = ShopAnalyticsClient\.idea\ShopAnalyticsClient.iml
+		ShopAnalyticsClient\.idea\vcs.xml = ShopAnalyticsClient\.idea\vcs.xml
+		ShopAnalyticsClient\.idea\workspace.xml = ShopAnalyticsClient\.idea\workspace.xml
+		ShopAnalyticsClient\.vscode\extensions.json = ShopAnalyticsClient\.vscode\extensions.json
+		ShopAnalyticsClient\.vscode\launch.json = ShopAnalyticsClient\.vscode\launch.json
+		ShopAnalyticsClient\.vscode\tasks.json = ShopAnalyticsClient\.vscode\tasks.json
+		ShopAnalyticsClient\angular.json = ShopAnalyticsClient\angular.json
+		ShopAnalyticsClient\package.json = ShopAnalyticsClient\package.json
+		ShopAnalyticsClient\public\favicon.ico = ShopAnalyticsClient\public\favicon.ico
+		ShopAnalyticsClient\README.md = ShopAnalyticsClient\README.md
+		ShopAnalyticsClient\src\app\app-routing.module.ts = ShopAnalyticsClient\src\app\app-routing.module.ts
+		ShopAnalyticsClient\src\app\app.component.css = ShopAnalyticsClient\src\app\app.component.css
+		ShopAnalyticsClient\src\app\app.component.html = ShopAnalyticsClient\src\app\app.component.html
+		ShopAnalyticsClient\src\app\app.component.spec.ts = ShopAnalyticsClient\src\app\app.component.spec.ts
+		ShopAnalyticsClient\src\app\app.component.ts = ShopAnalyticsClient\src\app\app.component.ts
+		ShopAnalyticsClient\src\app\app.module.ts = ShopAnalyticsClient\src\app\app.module.ts
+		ShopAnalyticsClient\src\index.html = ShopAnalyticsClient\src\index.html
+		ShopAnalyticsClient\src\main.ts = ShopAnalyticsClient\src\main.ts
+		ShopAnalyticsClient\src\styles.css = ShopAnalyticsClient\src\styles.css
+		ShopAnalyticsClient\tsconfig.app.json = ShopAnalyticsClient\tsconfig.app.json
+		ShopAnalyticsClient\tsconfig.json = ShopAnalyticsClient\tsconfig.json
+		ShopAnalyticsClient\tsconfig.spec.json = ShopAnalyticsClient\tsconfig.spec.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{40460BD9-780E-4AFF-8CAD-403A48BF6F0F}"
+	ProjectSection(SolutionItems) = preProject
+		openapitools.json = openapitools.json
+		shop-analytics.yaml = shop-analytics.yaml
+		docker-compose.yaml = docker-compose.yaml
+		run.ps1 = run.ps1
+		run.sh = run.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4846B580-0C10-467F-89FA-89EE3517AAB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopAnalyticsTests", "ShopAnalyticsTests\ShopAnalyticsTests.csproj", "{9EF2E567-6EA6-4687-B5EF-DF3D8C97A595}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F1EE5621-2A22-43FA-8E99-BE586148F727} = {08E04FDF-7B1C-44B0-9DEB-0F675F8F2C0F}
+		{4846B580-0C10-467F-89FA-89EE3517AAB6} = {08E04FDF-7B1C-44B0-9DEB-0F675F8F2C0F}
+		{9EF2E567-6EA6-4687-B5EF-DF3D8C97A595} = {4846B580-0C10-467F-89FA-89EE3517AAB6}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1EE5621-2A22-43FA-8E99-BE586148F727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EE5621-2A22-43FA-8E99-BE586148F727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EE5621-2A22-43FA-8E99-BE586148F727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EE5621-2A22-43FA-8E99-BE586148F727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF2E567-6EA6-4687-B5EF-DF3D8C97A595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF2E567-6EA6-4687-B5EF-DF3D8C97A595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF2E567-6EA6-4687-B5EF-DF3D8C97A595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF2E567-6EA6-4687-B5EF-DF3D8C97A595}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

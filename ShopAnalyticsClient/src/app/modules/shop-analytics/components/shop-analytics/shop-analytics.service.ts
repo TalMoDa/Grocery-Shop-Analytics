@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import {ShopDto} from '../../../shop-analytics-service';
+import {ShopDto} from '../../../../../shop-analytics-service';
 
 
 interface DateRange {

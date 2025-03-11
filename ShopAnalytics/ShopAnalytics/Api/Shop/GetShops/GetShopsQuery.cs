@@ -1,3 +1,7 @@
-﻿namespace ShopAnalytics.Api.Shop.GetShops;
+﻿using MediatR;
+using ShopAnalytics.Common.Models.ResultPattern;
+using ShopAnalytics.Models;
 
-public record GetShopsQuery();
+namespace ShopAnalytics.Api.Shop.GetShops;
+
+public record GetShopsQuery() : IRequest<Result<List<ShopDto>>>;

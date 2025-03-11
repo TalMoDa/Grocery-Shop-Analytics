@@ -1,3 +1,8 @@
-﻿namespace ShopAnalytics.Api.Analytics.GetAnalytics;
+﻿using MediatR;
+using ShopAnalytics.Common.Models.ResultPattern;
+using ShopAnalytics.Models;
 
-public record GetAnalyticsQuery();
+namespace ShopAnalytics.Api.Analytics.GetAnalytics;
+
+
+public record GetAnalyticsQuery(Guid ShopId, DateTime FromDate, DateTime ToDate) : IRequest<Result<List<DayAnalyticsDto>>>;

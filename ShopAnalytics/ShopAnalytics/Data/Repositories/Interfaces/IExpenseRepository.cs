@@ -1,6 +1,11 @@
-﻿namespace ShopAnalytics.Data.Repositories.Interfaces;
+﻿using ShopAnalytics.Data.Entities.EF;
 
-public interface IExpenseRepository
+namespace ShopAnalytics.Data.Repositories.Interfaces;
+
+public interface IExpenseRepository  : IBaseRepository<Expense>
 {
+    Task<decimal> GetExpensesSumByDateRangeAsync(Guid shopId, DateTime startDate, DateTime endDate, CancellationToken cancellationToken = default);
+    
+    Task<IReadOnlyList<Expense>> GetExpensesByDateRangeAsync(Guid shopId, DateTime startDate, DateTime endDate, CancellationToken cancellationToken = default);
     
 }

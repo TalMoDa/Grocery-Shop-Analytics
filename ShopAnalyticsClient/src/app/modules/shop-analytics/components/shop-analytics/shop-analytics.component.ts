@@ -1,10 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {AnalyticsService, DayAnalyticsDto, ShopDto, ShopsService} from '../../../shop-analytics-service';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {BehaviorSubject, Subject, combineLatest, filter, finalize, switchMap, takeUntil, tap} from 'rxjs';
 import {ChartType} from 'angular-google-charts';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ShopAnalyticsService} from './shop-analytics.service';
+import {AnalyticsService, DayAnalyticsDto, ShopDto, ShopsService} from '../../../../../shop-analytics-service';
 
 @Component({
   selector: 'app-shop-analytics',

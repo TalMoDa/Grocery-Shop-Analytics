@@ -1,0 +1,97 @@
+openapi: 3.0.3
+info:
+  title: Shop Analytics API
+  description: API for retrieving shop analytics data including income, expenses, and revenue.
+  version: 1.0.0
+servers:
+  - url: https://api.shopanalytics.com/v1
+    description: Production server
+  - url: http://localhost:5000/v1
+    description: Local development server
+
+paths:
+  /shops:
+    get:
+      summary: Get all shops
+      description: Retrieves a list of all available shops.
+      operationId: getShops
+      tags:
+        - Shops
+      responses:
+        "200":
+          description: A list of shops.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ShopDto"
+  
+  /analytics:
+    get:
+      summary: Get shop analytics
+      description: Retrieves income, outcome, and revenue analytics for a given date range.
+      operationId: getAnalytics
+      tags:
+        - Analytics
+      parameters:
+        - name: shopId
+          in: query
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: The ID of the shop to retrieve analytics for.
+        - name: fromDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+          description: The start date for analytics retrieval (YYYY-MM-DD).
+        - name: toDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+          description: The end date for analytics retrieval (YYYY-MM-DD).
+      responses:
+        "200":
+          description: Daily analytics data.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/DayAnalyticsDto"
+
+components:
+  schemas:
+    ShopDto:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        name:
+          type: string
+          example: "Supermarket Express"
+    
+    DayAnalyticsDto:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date
+          example: "2021-06-01"
+        income:
+          type: number
+          example: 1200.50
+        outcome:
+          type: number
+          example: 800.75
+        revenue:
+          type: number
+          example: 399.75

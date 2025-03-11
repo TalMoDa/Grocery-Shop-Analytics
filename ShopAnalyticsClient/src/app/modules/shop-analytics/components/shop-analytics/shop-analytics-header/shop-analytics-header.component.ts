@@ -1,8 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ShopAnalyticsService} from '../shop-analytics.service';
-import {DateRange} from '@angular/material/datepicker';
-import {ShopDto} from '../../../../shop-analytics-service';
 import {Subject, takeUntil} from 'rxjs';
+import {ShopDto} from '../../../../../../shop-analytics-service';
 
 @Component({
   selector: 'app-shop-analytics-header',

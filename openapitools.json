@@ -1,0 +1,50 @@
+{
+  "spaces": 2,
+  "generator-cli": {
+    "version": "7.12.0",
+    "generators": {
+      "angular": {
+        "generatorName": "typescript-angular",
+        "output": "#{cwd}/output/angular/open-api",
+        "glob": "shop-analytics.yaml",
+        "additionalProperties": {
+          "npmName": "@shopanalytics/client",
+          "npmVersion": "1.0.0",
+          "ngVersion": "18.0.0",
+          "supportsES6": true,
+          "providedInRoot": true,
+          "fileNaming": "kebab-case",
+          "enumPropertyNaming": "camelCase",
+          "stringEnums": true,
+          "withInterfaces": true,
+          "dateLibrary": "moment",
+          "serviceSuffix": "ApiService",
+          "skipOperationId": false
+        }
+      },
+      "aspnetcore": {
+        "generatorName": "aspnetcore",
+        "output": "#{cwd}/output/aspnetcore",
+        "glob": "shop-analytics.yaml",
+        "additionalProperties": {
+          "packageName": "ShopAnalyticsApi",
+          "packageTitle": "ShopAnalytics API",
+          "packageVersion": "2.0.0",
+          "aspnetCoreVersion": "8.0",
+          "buildTarget": "program",
+          "generateBody": true,
+          "nullableReferenceTypes": true,
+          "operationIsAsync": true,
+          "operationResultTask": true,
+          "swashbuckleVersion": "6.5.0",
+          "useDefaultRouting": true,
+          "useFrameworkReference": true,
+          "useNewtonsoft": false,
+          "useSwashbuckle": true,
+          "useControllers": true,
+          "useEndpoints": true
+        }
+      }
+    }
+  }
+}

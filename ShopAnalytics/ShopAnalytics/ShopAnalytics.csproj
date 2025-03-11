@@ -7,10 +7,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <LangVersion>13</LangVersion>
-        <RootNamespace>ShopAnalyticService</RootNamespace>
+        <RootNamespace>ShopAnalytics</RootNamespace>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Dapper" Version="2.1.66" />
         <PackageReference Include="FluentValidation" Version="11.11.0" />
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
         <PackageReference Include="MediatR" Version="12.4.1"/>
@@ -20,6 +22,7 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.2" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
         <PackageReference Include="Problem.Details" Version="1.1.0"/>
         <PackageReference Include="Serilog" Version="4.2.0" />
@@ -32,10 +35,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Api\Shop\GetAll\" />
         <Folder Include="Data\Entities\"/>
-        <Folder Include="Services\Implementations\"/>
-        <Folder Include="Services\Interfaces\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>
