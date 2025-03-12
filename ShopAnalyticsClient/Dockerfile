@@ -5,9 +5,8 @@ WORKDIR /app
 # Copy package.json and package-lock.json first
 COPY package*.json ./
 
-# Clean install dependencies using --force to ensure correct platform binaries
-# This forces npm to install platform-specific binaries for the current environment (Linux)
-RUN npm ci --force
+# Install dependencies and update package-lock.json
+RUN npm install --force
 
 # Copy the entire source code after installing dependencies
 COPY . .
