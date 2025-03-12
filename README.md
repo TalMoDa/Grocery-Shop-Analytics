@@ -9,7 +9,7 @@
 
 ### 🏗 Tech Stack
 - **Frontend:** Angular 19, Google Charts, Bootstrap & Angular Material
-- **Backend:** ASP.NET Core 8 Web API
+- **Backend:** ASP.NET Core 9 Web API
 - **Database:** PostgreSQL (Neon)
 - **Other:** OpenAPI, Serilog, FluentValidation, Dapper & EF Core
 
@@ -36,8 +36,8 @@
   - Enables users to **navigate back/forward without losing filters**.
 - **UI Styling:** Bootstrap & Angular Material.
 
-### 🚀 Backend (ASP.NET Core 8)
-- **.NET 8 Web API** serving shop analytics data.
+### 🚀 Backend (ASP.NET Core 9)
+- **.NET 9 Web API** serving shop analytics data.
 - **CQRS Pattern:** Uses **Dapper** for queries & **EF Core** for commands.
 - **OpenAPI Spec:** Auto-generated API contracts.
 - **Database-First Approach:**
@@ -72,7 +72,7 @@
 ### Prerequisites
 Ensure you have:
 - **Node.js & npm** (for frontend)
-- **.NET 8 SDK** (for backend)
+- **.NET 9 SDK** (for backend)
 - **PostgreSQL (Neon)** (for database)
 
 ### 🏃 Run Locally (Windows)
