@@ -15,12 +15,9 @@ export class ErrorInterceptor implements HttpInterceptor {
   constructor(private snackBar: MatSnackBar) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    debugger;
     return next.handle(req).pipe(
       catchError((error: HttpErrorResponse) => {
-        debugger;
         let errorMessage = 'An unexpected error occurred.';
-        debugger;
         if (error.error) {
           if (error.error.errors && Array.isArray(error.error.errors)) {
             // Map errors from the `errors` array
